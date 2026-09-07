@@ -581,9 +581,9 @@ footer small { font-size: .72rem; }
   }
   .navbar-collapse.show .navbar-nav,
   .navbar-collapse.collapsing .navbar-nav {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
     gap: 8px;
     align-items: center;
     justify-content: flex-start;
