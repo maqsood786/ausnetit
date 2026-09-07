@@ -1,7 +1,7 @@
 const selected = new Set();
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const recipientEmail = "maqsoodanwar919@gmail.com";
-const web3FormsAccessKey = "YOUR_WEB3FORMS_ACCESS_KEY";
+const web3FormsAccessKey = "73d0459d-bd44-4910-93de-dfd124a567d8";
 const web3FormsUrl = "https://api.web3forms.com/submit";
 
 function initialiseAnimations() {
