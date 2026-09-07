@@ -566,7 +566,28 @@ footer small { font-size: .72rem; }
 
 @media (max-width: 991px) {
   html, body { overflow-x: hidden; }
-  .navbar-collapse { padding: 18px 0 8px; }
+  .navbar-collapse { padding: 12px 0 8px; }
+  .navbar-nav { width: 100%; }
+  .navbar-nav .nav-link,
+  .navbar-nav .btn-nav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    width: auto;
+    padding: 10px 14px;
+    margin: 0;
+    border-radius: 10px;
+  }
+  .navbar-collapse.show .navbar-nav,
+  .navbar-collapse.collapsing .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+  }
   .hero { overflow: visible; }
   .hero .row { padding-top: 110px !important; padding-bottom: 80px; }
   .hero-title { font-size: clamp(2.8rem, 8vw, 4.5rem); }
