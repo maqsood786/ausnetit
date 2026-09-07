@@ -66,32 +66,14 @@ async function sendEmailForm(subject, lines, extras = {}) {
     ...extras
   };
 
-  try {
-    const response = await fetch(web3FormsUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      body: JSON.stringify(payload)
-    });
-
-    const result = await response.json();
-    if (response.ok && result.success) return true;
-
-    console.warn("Web3Forms email failed:", result || "unknown error");
-  } catch (error) {
-    console.warn("Web3Forms unavailable, falling back to mailto:", error);
-  }
-
-  const mailtoUrl = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  try {
-    window.location.href = mailtoUrl;
-  } catch (error) {
-    window.open(mailtoUrl, "_self");
-  }
-
-  return false;
+  await fetch(web3FormsUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify(payload)
+  });
 }
 
 document.getElementById("scopeBtn").addEventListener("click", async () => {
