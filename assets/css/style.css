@@ -563,8 +563,10 @@ footer small { font-size: .72rem; }
   font-size: .8rem;
 }
 .custom-toast b { color: var(--mint); }
-
+.mobile-btn{display:none !important;}
 @media (max-width: 991px) {
+  .disktop-btn{display:none !important;}
+  .mobile-btn{display:inline-flex !important;}
   html, body { overflow-x: hidden; }
   .navbar-collapse { padding: 12px 0 8px; }
   .navbar-nav { width: 100%; }
